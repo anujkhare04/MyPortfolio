@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizKar Details | Anuj Khare</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .detail-page {
+            padding-top: 120px;
+            padding-bottom: 100px;
+        }
+
+        .detail-header {
+            margin-bottom: 3rem;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .tech-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .detail-section {
+            margin-bottom: 3rem;
+        }
+
+        .detail-section h2 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .challenge-box {
+            background: rgba(99, 102, 241, 0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .interview-box {
+            background: rgba(56, 189, 248, 0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .detail-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="nav-brand">Anuj Khare</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html#projects" class="nav-link">Back to Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="detail-page container">
+        <div class="detail-header">
+            <h1 class="hero-title">QuizKar</h1>
+            <p class="hero-subtitle">Single-Page Quiz Architecture with AI-Powered Content</p>
+        </div>
+
+        <div class="detail-grid">
+            <div class="detail-main">
+                <section class="detail-section">
+                    <h2>Overview</h2>
+                    <p>QuizKar is a high-performance assessment engine capable of generating localized quizzes instantly
+                        via
+                        <strong>Gemini AI</strong>. The system focuses on data-driven insights, providing real-time
+                        competitive analytics for students through optimized backend pipelines.
+                    </p>
+                </section>
+
+                <section class="detail-section">
+                    <h2>Key Features</h2>
+                    <ul class="project-features" style="display: block;">
+                        <li><strong>AI Question Orchestration:</strong> Custom-built logic to parse Gemini API responses
+                            into validated JSON quiz structures.</li>
+                        <li><strong>Scalable Leaderboards:</strong> Real-time ranking calculated via
+                            <strong>MongoDB Aggregation Framework</strong> to ensure zero-lag standings.
+                        </li>
+                        <li><strong>Session Management:</strong> State-persistent quiz sessions using React hooks for
+                            a seamless educational experience.</li>
+                        <li><strong>REST API Architecture:</strong> Secured Node.js endpoints with robust error handling
+                            for quiz lifecycle management.</li>
+                    </ul>
+                </section>
+
+                <section class="detail-section">
+                    <div class="challenge-box">
+                        <h3>Technical Challenge</h3>
+                        <p><strong>Scaling Real-Time Stats:</strong> Recalculating scores for thousands of students
+                            after every question can be DB-intensive.</p>
+                        <p><strong>Solution:</strong> I used MongoDB Aggregation pipelines to calculate scores only when
+                            requested, and explored caching strategies to minimize redundant calculations during live
+                            challenge modes.</p>
+                    </div>
+                </section>
+
+                <div class="interview-box">
+                    <h3>The 60-Second Pitch</h3>
+                    <p>"QuizKar is a MERN-stack quiz platform I built that integrates AI for question generation. I used
+                        the Gemini API to let users create quizzes instantly from any topic. On the backend, I focused
+                        heavily on data efficiency—using MongoDB aggregations to handle real-time leaderboards. This
+                        project taught me how to handle asynchronous AI responses and manage high-frequency data
+                        updates."</p>
+                </div>
+            </div>
+
+            <aside class="tech-sidebar">
+                <div class="skill-category">
+                    <h3>Tech Stack</h3>
+                    <ul class="skill-list">
+                        <li>React.js</li>
+                        <li>Node.js (Express)</li>
+                        <li>MongoDB (Aggregations)</li>
+                        <li>Gemini API (AI)</li>
+                        <li>Mongoose</li>
+                    </ul>
+                </div>
+                <div class="hero-cta" style="margin-top: 2rem; flex-direction: column;">
+                    <a href="https://github.com/anujkhare255/quizkar" class="btn btn-primary"
+                        style="text-align: center;">GitHub Repository</a>
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+
+</html>

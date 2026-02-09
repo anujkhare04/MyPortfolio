@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doubt Solver Details | Anuj Khare</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .detail-page {
+            padding-top: 120px;
+            padding-bottom: 100px;
+        }
+
+        .detail-header {
+            margin-bottom: 3rem;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .tech-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .detail-section {
+            margin-bottom: 3rem;
+        }
+
+        .detail-section h2 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .challenge-box {
+            background: rgba(99, 102, 241, 0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .interview-box {
+            background: rgba(56, 189, 248, 0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .detail-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="nav-brand">Anuj Khare</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html#projects" class="nav-link">Back to Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="detail-page container">
+        <div class="detail-header">
+            <h1 class="hero-title">Doubt Solver</h1>
+            <p class="hero-subtitle">Real-Time Learning with WebRTC, Socket.IO & AI</p>
+        </div>
+
+        <div class="detail-grid">
+            <div class="detail-main">
+                <section class="detail-section">
+                    <h2>The Solution</h2>
+                    <p>Built a real-time platform where students upload image-based doubts. The system decides between
+                        AI-generated solutions (using <strong>Gemini API</strong>) or connecting the student to a live
+                        tutor for immediate assistance.</p>
+                </section>
+
+                <section class="detail-section">
+                    <h2>Core Features</h2>
+                    <ul class="project-features" style="display: block;">
+                        <li><strong>AI Image Understanding:</strong> Integrated Gemini API to analyze uploaded images
+                            and provide contextual text-based solutions.</li>
+                        <li><strong>Live Tutor Matching:</strong> Real-time session coordination and tutor matching
+                            using <strong>Socket.IO</strong>.</li>
+                        <li><strong>1:1 Video Calls:</strong> High-bandwidth, low-latency video communication enabled by
+                            <strong>WebRTC</strong>.</li>
+                        <li><strong>Collaborative Whiteboard:</strong> Custom <strong>HTML Canvas</strong>
+                            implementation for visual problem solving during live sessions.</li>
+                        <li><strong>Mutual Rating System:</strong> Post-session feedback loop for quality assurance
+                            between students and tutors.</li>
+                    </ul>
+                </section>
+
+                <section class="detail-section">
+                    <div class="challenge-box">
+                        <h3>Technical Challenge</h3>
+                        <p><strong>Low-Latency Communcation:</strong> Syncing a whiteboard and video call simultaneously
+                            across different network conditions.</p>
+                        <p><strong>Solution:</strong> Leveraged WebRTC for the data channel to sync canvas coordinates
+                            in real-time while maintaining stable video streams through STUN/TURN servers.</p>
+                    </div>
+                </section>
+
+                <div class="interview-box">
+                    <h3>The 60-Second Pitch</h3>
+                    <p>"I developed Doubt Solver to modernize student-tutor interactions. It’s a real-time platform
+                        where I combined WebRTC for video calls and Gemini API for automated image-based doubt solving.
+                        I also built a collaborative whiteboard using HTML Canvas to make learning interactive. This
+                        project gave me deep experience in handling complex real-time events and multi-user
+                        synchronization."</p>
+                </div>
+            </div>
+
+            <aside class="tech-sidebar">
+                <div class="skill-category">
+                    <h3>Tech Stack</h3>
+                    <ul class="skill-list">
+                        <li>React & Node.js</li>
+                        <li>WebRTC (Video/Data)</li>
+                        <li>Socket.IO (Signaling)</li>
+                        <li>Gemini API (Vision/AI)</li>
+                        <li>HTML Canvas (Shared Whiteboard)</li>
+                    </ul>
+                </div>
+                <div class="hero-cta" style="margin-top: 2rem; flex-direction: column;">
+                    <a href="https://github.com/anujkhare04/Doubt-Solver-.git" class="btn btn-primary"
+                        style="text-align: center;">GitHub Repository</a>
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+
+</html>

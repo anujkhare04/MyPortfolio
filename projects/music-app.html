@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Streaming Details | Anuj Khare</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .detail-page {
+            padding-top: 120px;
+            padding-bottom: 100px;
+        }
+
+        .detail-header {
+            margin-bottom: 3rem;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .tech-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .detail-section {
+            margin-bottom: 3rem;
+        }
+
+        .detail-section h2 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .challenge-box {
+            background: rgba(99, 102, 241, 0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .interview-box {
+            background: rgba(56, 189, 248, 0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .detail-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="nav-brand">Anuj Khare</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html#projects" class="nav-link">Back to Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="detail-page container">
+        <div class="detail-header">
+            <h1 class="hero-title">Music Streaming App</h1>
+            <p class="hero-subtitle">High-Performance Media Delivery using ImageKit CDN</p>
+        </div>
+
+        <div class="detail-grid">
+            <div class="detail-main">
+                <section class="detail-section">
+                    <h2>Overview</h2>
+                    <p>A full-stack music streaming platform designed for performance. It features secure audio upload,
+                        custom playback controls, and metadata handling, with a strong focus on optimized media delivery
+                        for end-users.</p>
+                </section>
+
+                <section class="detail-section">
+                    <h2>Core Features</h2>
+                    <ul class="project-features" style="display: block;">
+                        <li><strong>Optimized Delivery:</strong> Integrated <strong>ImageKit CDN</strong> to handle
+                            media delivery, reducing load times by serving assets from geographically distributed edge
+                            locations.</li>
+                        <li><strong>Secure Media Management:</strong> Audio upload system with metadata handling (Tags,
+                            Artist, Cover Art) stored in MongoDB.</li>
+                        <li><strong>Access Control:</strong> Implemented permissions to ensure only authorized users can
+                            upload or modify streaming parameters.</li>
+                        <li><strong>Responsive Player:</strong> A custom React-based audio player with wave
+                            visualization and full playback controls.</li>
+                    </ul>
+                </section>
+
+                <section class="detail-section">
+                    <div class="challenge-box">
+                        <h3>Technical Challenge</h3>
+                        <p><strong>Bandwidth Efficiency:</strong> Serving high-quality MP3 files directly from a Node.js
+                            server causes high latency and server costs.</p>
+                        <p><strong>Solution:</strong> Offloaded media delivery to ImageKit CDN. This ensures that the
+                            main server only handles metadata and Auth, while the heavy files are served via optimized
+                            image/media delivery networks.</p>
+                    </div>
+                </section>
+
+                <div class="interview-box">
+                    <h3>The 60-Second Pitch</h3>
+                    <p>"I built a music streaming application using Node.js and Express to understand media handling at
+                        scale. I focused on performance by integrating ImageKit CDN, which optimized our media delivery
+                        significantly. This project helped me master handling large binary files, multi-part form data
+                        uploads, and integrating third-party storage APIs into a MERN ecosystem."</p>
+                </div>
+            </div>
+
+            <aside class="tech-sidebar">
+                <div class="skill-category">
+                    <h3>Tech Stack</h3>
+                    <ul class="skill-list">
+                        <li>Node.js & Express</li>
+                        <li>MongoDB</li>
+                        <li>ImageKit (CDN)</li>
+                        <li>React.js</li>
+                        <li>Multer</li>
+                    </ul>
+                </div>
+                <div class="hero-cta" style="margin-top: 2rem; flex-direction: column;">
+                    <a href="https://github.com/anujkhare255/music-streaming-app" class="btn btn-primary"
+                        style="text-align: center;">GitHub Repository</a>
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+
+</html>

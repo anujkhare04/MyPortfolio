@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Project Details | Anuj Khare</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .detail-page {
+            padding-top: 120px;
+            padding-bottom: 100px;
+        }
+
+        .detail-header {
+            margin-bottom: 3rem;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .tech-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .detail-section {
+            margin-bottom: 3rem;
+        }
+
+        .detail-section h2 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .challenge-box {
+            background: rgba(99, 102, 241, 0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .interview-box {
+            background: rgba(56, 189, 248, 0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .detail-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="nav-brand">Anuj Khare</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html#projects" class="nav-link">Back to Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="detail-page container">
+        <div class="detail-header">
+            <h1 class="hero-title">E-Commerce Platform</h1>
+            <p class="hero-subtitle">Full-featured MERN Stack Shopping Experience</p>
+        </div>
+
+        <div class="detail-grid">
+            <div class="detail-main">
+                <section class="detail-section">
+                    <h2>The Solution</h2>
+                    <p>Built a robust e-commerce application focusing on smooth user flow, from product discovery to
+                        checkout. The platform emphasizes performance, responsive design, and state management for a
+                        seamless shopping experience.</p>
+                </section>
+
+                <section class="detail-section">
+                    <h2>Core Features</h2>
+                    <ul class="project-features" style="display: block;">
+                        <li><strong>Dynamic Product Management:</strong> Product browsing with advanced filtering by
+                            category, price, and ratings.</li>
+                        <li><strong>Cart & Checkout:</strong> Real-time cart management with local storage
+                            synchronization and secure checkout simulation.</li>
+                        <li><strong>Order Tracking:</strong> End-to-end order processing flow including status updates
+                            and history.</li>
+                        <li><strong>Responsive UI:</strong> Mobile-first design approach ensuring perfect rendering
+                            across all device sizes.</li>
+                    </ul>
+                </section>
+
+                <section class="detail-section">
+                    <div class="challenge-box">
+                        <h3>Technical Challenge</h3>
+                        <p><strong>Consistent State Management:</strong> Ensuring the shopping cart remains synced
+                            across different tabs and persists between session refreshes.</p>
+                        <p><strong>Solution:</strong> Implemented a combination of React Context API for global state
+                            and local storage for persistence, ensuring no data loss during navigation.</p>
+                    </div>
+                </section>
+
+                <div class="interview-box">
+                    <h3>The 60-Second Pitch</h3>
+                    <p>"I built this E-Commerce platform using the MERN stack to master complex user flows and state
+                        management. I focused on building a highly responsive UI and a functional cart system that
+                        simulates a real-world checkout process. This project helped me refine my skills in REST API
+                        design for product filtering and specialized in building mobile-friendly web applications."</p>
+                </div>
+            </div>
+
+            <aside class="tech-sidebar">
+                <div class="skill-category">
+                    <h3>Tech Stack</h3>
+                    <ul class="skill-list">
+                        <li>MongoDB</li>
+                        <li>Express.js</li>
+                        <li>React.js</li>
+                        <li>Node.js</li>
+                        <li>Tailwind CSS</li>
+                    </ul>
+                </div>
+                <div class="hero-cta" style="margin-top: 2rem; flex-direction: column;">
+                    <a href="https://github.com/anujkhare04" class="btn btn-primary" style="text-align: center;">GitHub
+                        Repository</a>
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+
+</html>
